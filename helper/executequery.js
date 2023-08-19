@@ -7,7 +7,7 @@ const query = async (QUERY, params) => {
         console.log(err);
         throw err;
       }
-      console.log(result);
+      console.log("query result:", result);
       res(result);
     });
   });
