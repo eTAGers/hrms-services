@@ -3,7 +3,7 @@ const env = () => {
   return {
     saltRounds: 10,
     jwtPrivateKey: "gibigo",
-    endpoint: "/api/v1",
+    endpoint: "/api",
     port: 8500,
     mySQLconfig: {
       host: dbConfig.host,
@@ -17,7 +17,7 @@ const env = () => {
 };
 module.exports = {
   ...env(),
-  noAuthRequired: ["/api/login", "/api/v1/test"],
+  noAuthRequired: ["/api/login", "/api/signUp"],
   aws_access_key_id: "AKIAQPHMHKKQGLJ47LED",
   aws_secret_access_key: "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",
   spacesEndpoint: "gobiggguru-uqmr16rdz9ynhe3gcugzmr5j6fhegaps3a-s3alias",
