@@ -19,3 +19,10 @@ exports.mysqlSingleObjResponseHandler = function (records) {
 exports.parseSqlResult = function () {
   return JSON.parse(JSON.stringify(this[0]));
 };
+
+module.exports.getTenantIdFromRequest = (req) => {
+  console.log(req.headers);
+  // Extract tenantId from the request headers or other places as needed
+  const tenantId = req.headers["tenantid"];
+  return tenantId;
+};

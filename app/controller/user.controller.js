@@ -1,6 +1,6 @@
 const { loginSchema, signUpSchema } = require("../../utilities/schema");
 const { passwordHash, verifyPassword } = require("../../helper/bcryptPassword");
-const { signUpUser } = require("../services/user.services");
+const { signUpUserSP } = require("../services/user.services");
 const utilityQuery = require("../../utilities/utilityQuery");
 const { query } = require("../../helper/executequery");
 const { responseHandler } = require("../../utilities");
@@ -51,7 +51,7 @@ const signUpHandler = async (req, res) => {
   try {
     await signUpSchema.validateAsync(req.body);
     req.body.pass = await passwordHash(req.body.password);
-    await signUpUser(req.body);
+    await signUpUserSP(req.body);
 
     const resp = await query(utilityQuery.selectUserDetails, [req.body.email]);
     responseHandler.successResponse(
