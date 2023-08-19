@@ -7,7 +7,7 @@ const { endpoint, port = 5500 } = require("../config");
 const path = require("path");
 const { isAuthenticated } = require("../helper/tokenVerify");
 
-const routes = require("../app/routes");
+const routes = require("../app/mainRouter");
 
 module.exports = () => {
   for (const utility in utilities) {

@@ -29,3 +29,24 @@ END;
 //
 
 DELIMITER ;
+
+
+
+CREATE TABLE store (
+  storeid INT AUTO_INCREMENT PRIMARY KEY,
+  storename VARCHAR(255) NOT NULL,
+  userid INT,
+  FOREIGN KEY (userid) REFERENCES userdetails(userid)
+);
+
+
+
+CREATE OR REPLACE PROCEDURE create_store(
+  IN p_userId INT,
+  IN p_storeName VARCHAR(255),
+  IN p_storeCategory VARCHAR(255)
+)
+BEGIN
+    INSERT INTO store (userid, storename, storecategory)
+    VALUES (p_userId, p_storeName, p_storeCategory);
+END
