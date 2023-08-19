@@ -1,20 +1,6 @@
 exports.responseMessages = {
   userNotFound: "User Not Found",
-  getUser: "Get All User List",
-  getProductCategorySuccessfully: "Get All Product Category List",
-  updateProductCategorySuccessfully: " Successfully Updated Product Category",
-  getBrandSuccessfully: "Get All Brand List",
-  updateBrandSuccessfully: " Successfully Updated Brand Category",
-  updateSalesSuccessfully: " Successfully Updated Sales Category",
-  getStoreSuccessfully: "Get All Brand List",
-  updateStoreSuccessfully: "Store Updated Successfully",
-  getCompanyDetails: "Get Company Details",
-  addProduct: "Product Added Successfully",
-  updateProduct: "Product Updated Successfully",
-  getCustomer: "Get Customer List",
-  getBrandSuccessfully: "Get All Brand List",
-  fileUpload: "File Uploaded Successfully",
-  getSales: "Get All Sales List",
-  getInvoice:"Get All Invoice List",
-  storeActive: "Your Store is inactive.Contact Admin"
+  emailOrMobile: "Email or Mobile Number already exists",
+  duplicateEntry: "Duplicate entry in userdetails table",
+  addedSuccessfully: "Added Successfully",
 };

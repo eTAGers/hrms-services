@@ -16,3 +16,4 @@ const connectToDB = () => {
   });
 };
 exports.connectToDB = connectToDB;
+exports.pool = pool;
