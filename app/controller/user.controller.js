@@ -6,22 +6,54 @@ const { query } = require("../../helper/executequery");
 const { responseHandler } = require("../../utilities");
 const { mysqlSingleResponseHandler } = require("../../utilities/utility");
 const { responseMessages } = require("../../utilities/messages");
+const { loginByEmail, loginByMobile } = require("../query/user.query");
+const { generateToken } = require("../../helper/jwtToken");
 
-module.exports.login = async (req, res) => {
+const loginHandler = async (req, res) => {
   try {
     await loginSchema.validateAsync(req.body);
+
+    let resp;
+    if (req.body.email) {
+      resp = await query(loginByEmail(req.body.email));
+    } else if (req.body.mobile) {
+      resp = await query(loginByMobile(req.body.mobile));
+    }
+
+    if (!resp || !Object.keys(resp).length) {
+      responseHandler.errorResponse(
+        res,
+        responseMessages.userNotFound,
+        responseMessages.userNotFound
+      );
+      return;
+    }
+
+    const rows = mysqlSingleResponseHandler(resp);
+    await verifyPassword(req.body.password, rows.hashedpassword);
+    delete rows.hashedpassword;
+
+    const newToken = generateToken(rows);
+    responseHandler.successResponse(
+      res,
+      {
+        token: newToken,
+        ...rows,
+      },
+      responseMessages.loginSuccessfully
+    );
   } catch (err) {
     responseHandler.errorResponse(res, err.message, err.message);
   }
 };
 
-module.exports.signUp = async (req, res) => {
+const signUpHandler = async (req, res) => {
   try {
     await signUpSchema.validateAsync(req.body);
     req.body.pass = await passwordHash(req.body.password);
     await signUpUser(req.body);
+
     const resp = await query(utilityQuery.selectUserDetails, [req.body.email]);
-    console.log(mysqlSingleResponseHandler(resp));
     responseHandler.successResponse(
       res,
       mysqlSingleResponseHandler(resp),
@@ -38,4 +70,9 @@ module.exports.signUp = async (req, res) => {
       responseHandler.errorResponse(res, err.message, err.message);
     }
   }
+};
+
+module.exports = {
+  login: loginHandler,
+  signUp: signUpHandler,
 };

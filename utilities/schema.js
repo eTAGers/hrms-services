@@ -1,16 +1,32 @@
 const Joi = require("joi");
+const customMessages = {
+  "string.email": "Please provide a valid email address",
+  "string.pattern.base": "Mobile must be a valid 10-digit number",
+  "any.required": "{{#label}} is required",
+};
+const eitherEmailOrMobile = (value, helpers) => {
+  if (!value.email && !value.mobile) {
+    return helpers.message(
+      "Value must contain either email or mobile, but not both"
+    );
+  }
+  return value;
+};
 
 const loginSchema = Joi.object({
-  userName: Joi.string().required(),
+  email: Joi.string().email(),
+  mobile: Joi.string().regex(/^\d{10}$/),
   password: Joi.string().required(),
-});
+})
+  .custom(eitherEmailOrMobile)
+  .messages(customMessages);
 
 const signUpSchema = Joi.object({
   userName: Joi.string().required(),
   email: Joi.string().required(),
   mobile: Joi.string().required(),
   password: Joi.string().required(),
-});
+}).messages(customMessages);
 
 module.exports = {
   loginSchema,
