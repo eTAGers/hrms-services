@@ -6,7 +6,7 @@ const { query } = require("../../helper/executequery");
 const { responseHandler } = require("../../utilities");
 const { mysqlSingleResponseHandler } = require("../../utilities/utility");
 const { responseMessages } = require("../../utilities/messages");
-const { loginByEmail, loginByMobile } = require("../query/user.query");
+const { loginByEmail, loginByMobile, store } = require("../query/user.query");
 const { generateToken } = require("../../helper/jwtToken");
 
 const loginHandler = async (req, res) => {
@@ -32,13 +32,15 @@ const loginHandler = async (req, res) => {
     const rows = mysqlSingleResponseHandler(resp);
     await verifyPassword(req.body.password, rows.hashedpassword);
     delete rows.hashedpassword;
-
+    let storeCreated = await query(store(rows.userid));
+    storeCreated = mysqlSingleResponseHandler(storeCreated);
     const newToken = generateToken(rows);
     responseHandler.successResponse(
       res,
       {
         token: newToken,
         ...rows,
+        ...storeCreated,
       },
       responseMessages.loginSuccessfully
     );
