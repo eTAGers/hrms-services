@@ -1,9 +1,15 @@
+const { storePresentQuery } = require("../app/query/store.query");
 const { noAuthRequired } = require("../config");
+const { mysqlSingleResponseHandler } = require("../utilities/utility");
+const { query } = require("./executequery");
 
 module.exports = {
   isAuthenticated: async (req, res, next) => {
     try {
       if (noAuthRequired.some((route) => req.url.startsWith(route))) {
+        let tenant = req.headers["tenant"];
+        let tenantId = await query(storePresentQuery(tenant));
+        req.headers["tenantid"] = mysqlSingleResponseHandler(tenantId).storeid;
         next();
       } else {
         let token =

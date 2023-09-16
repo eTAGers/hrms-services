@@ -21,7 +21,6 @@ exports.parseSqlResult = function () {
 };
 
 module.exports.getTenantIdFromRequest = (req) => {
-  console.log(req.headers);
   // Extract tenantId from the request headers or other places as needed
   const tenantId = req.headers["tenantid"];
   return tenantId;
