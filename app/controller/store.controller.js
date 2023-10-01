@@ -7,7 +7,7 @@ const {
   getTenantIdFromRequest,
   mysqlSingleResponseHandler,
 } = require("../../utilities/utility");
-const { storePresentQuery } = require("../query/store.query");
+const { storePresentQuery, store } = require("../query/store.query");
 const { createStoreSP } = require("../services/store.services");
 
 const createStoreHandler = async (req, res) => {
@@ -16,9 +16,11 @@ const createStoreHandler = async (req, res) => {
     const tenantId = getTenantIdFromRequest(req);
     req.body.userId = tenantId;
     await createStoreSP(req.body);
+    let resp;
+    resp = await query(store(tenantId));
     responseHandler.successResponse(
       res,
-      { tenantId: tenantId },
+      { resp },
       responseMessages.addedSuccessfully
     );
   } catch (err) {
