@@ -7,9 +7,11 @@ module.exports = {
   isAuthenticated: async (req, res, next) => {
     try {
       if (noAuthRequired.some((route) => req.url.startsWith(route))) {
-        let tenant = req.headers["tenant"];
-        let tenantId = await query(storePresentQuery(tenant));
-        req.headers["tenantid"] = mysqlSingleResponseHandler(tenantId).storeid;
+        if (req.headers["store"]) {
+          let store = req.headers["store"];
+          let storeId = await query(storePresentQuery(store));
+          req.headers["tenantid"] = mysqlSingleResponseHandler(storeId).storeid;
+        }
         next();
       } else {
         let token =
