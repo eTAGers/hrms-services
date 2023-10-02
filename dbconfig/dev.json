@@ -1,0 +1,11 @@
+{
+  "dev": {
+    "host": "154.41.233.204",
+    "user": "u682599449_admin",
+    "password": "Etagers@123",
+    "database": "u682599449_ECOMMERCEDB",
+    "driver": "mysql",
+    "multipleStatements": true
+  },
+  "sql-file": true
+}
