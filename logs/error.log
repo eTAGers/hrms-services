@@ -4116,3 +4116,1822 @@
   ],
   timestamp: '2023-10-01 17:13:48'
 }
+{
+  error: Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1066:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at node:net:1250:9
+      at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+      --------------------
+      at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+      at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+      at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)
+      at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10
+      at new Promise (<anonymous>)
+      at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)
+      at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)
+      at Object.onceWrapper (node:events:627:28)
+      at Server.emit (node:events:513:28) {
+    errno: -51,
+    code: 'ENETUNREACH',
+    syscall: 'connect',
+    address: '154.41.233.204',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  message: 'uncaughtException: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)\n' +
+    '    at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)\n' +
+    '    at Object.onceWrapper (node:events:627:28)\n' +
+    '    at Server.emit (node:events:513:28)',
+  stack: 'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)\n' +
+    '    at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)\n' +
+    '    at Object.onceWrapper (node:events:627:28)\n' +
+    '    at Server.emit (node:events:513:28)',
+  exception: true,
+  date: 'Sun Oct 15 2023 11:26:06 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 5956,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 79331328,
+      heapTotal: 36765696,
+      heapUsed: 18299440,
+      external: 921332,
+      arrayBuffers: 41302
+    }
+  },
+  os: {
+    loadavg: [ 2.9111328125, 2.54150390625, 2.37109375 ],
+    uptime: 10445
+  },
+  trace: [
+    {
+      column: 16,
+      file: 'node:net',
+      function: 'internalConnect',
+      line: 1066,
+      method: null,
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/async_hooks',
+      function: 'defaultTriggerAsyncIdScope',
+      line: 464,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: 'node:net',
+      function: null,
+      line: 1250,
+      method: null,
+      native: false
+    },
+    {
+      column: 11,
+      file: 'node:internal/process/task_queues',
+      function: 'process.processTicksAndRejections',
+      line: 77,
+      method: 'processTicksAndRejections',
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 48,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._enqueue',
+      line: 144,
+      method: '_enqueue',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.handshake',
+      line: 51,
+      method: 'handshake',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: 'PoolConnection.connect',
+      line: 116,
+      method: 'connect',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.getConnection',
+      line: 48,
+      method: 'getConnection',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js',
+      function: null,
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js',
+      function: 'connectToDB',
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 627,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Server.emit',
+      line: 513,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 11:26:06'
+}
+{
+  error: Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1066:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at node:net:1250:9
+      at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+      --------------------
+      at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+      at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+      at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)
+      at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10
+      at new Promise (<anonymous>)
+      at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)
+      at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)
+      at Object.onceWrapper (node:events:627:28)
+      at Server.emit (node:events:513:28) {
+    errno: -51,
+    code: 'ENETUNREACH',
+    syscall: 'connect',
+    address: '154.41.233.204',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  message: 'uncaughtException: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)\n' +
+    '    at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)\n' +
+    '    at Object.onceWrapper (node:events:627:28)\n' +
+    '    at Server.emit (node:events:513:28)',
+  stack: 'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)\n' +
+    '    at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)\n' +
+    '    at Object.onceWrapper (node:events:627:28)\n' +
+    '    at Server.emit (node:events:513:28)',
+  exception: true,
+  date: 'Sun Oct 15 2023 11:27:31 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 6058,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 76218368,
+      heapTotal: 37289984,
+      heapUsed: 18234144,
+      external: 921332,
+      arrayBuffers: 41302
+    }
+  },
+  os: {
+    loadavg: [ 2.18505859375, 2.4248046875, 2.34130859375 ],
+    uptime: 10530
+  },
+  trace: [
+    {
+      column: 16,
+      file: 'node:net',
+      function: 'internalConnect',
+      line: 1066,
+      method: null,
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/async_hooks',
+      function: 'defaultTriggerAsyncIdScope',
+      line: 464,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: 'node:net',
+      function: null,
+      line: 1250,
+      method: null,
+      native: false
+    },
+    {
+      column: 11,
+      file: 'node:internal/process/task_queues',
+      function: 'process.processTicksAndRejections',
+      line: 77,
+      method: 'processTicksAndRejections',
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 48,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._enqueue',
+      line: 144,
+      method: '_enqueue',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.handshake',
+      line: 51,
+      method: 'handshake',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: 'PoolConnection.connect',
+      line: 116,
+      method: 'connect',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.getConnection',
+      line: 48,
+      method: 'getConnection',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js',
+      function: null,
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js',
+      function: 'connectToDB',
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 627,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Server.emit',
+      line: 513,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 11:27:31'
+}
+{
+  error: ReferenceError: fetchProduct is not defined
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+      at Module.load (node:internal/modules/cjs/loader:1117:32)
+      at Module._load (node:internal/modules/cjs/loader:958:12)
+      at Module.require (node:internal/modules/cjs/loader:1141:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10),
+  level: 'error',
+  message: 'uncaughtException: fetchProduct is not defined\n' +
+    'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  stack: 'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:37:09 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 2840,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 77627392,
+      heapTotal: 36503552,
+      heapUsed: 17986728,
+      external: 902921,
+      arrayBuffers: 41303
+    }
+  },
+  os: {
+    loadavg: [ 2.02001953125, 2.8779296875, 4.23681640625 ],
+    uptime: 4072
+  },
+  trace: [
+    {
+      column: 43,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js',
+      function: null,
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1117,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 958,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1141,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js',
+      function: null,
+      line: 6,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:37:09'
+}
+{
+  error: ReferenceError: fetchProduct is not defined
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+      at Module.load (node:internal/modules/cjs/loader:1117:32)
+      at Module._load (node:internal/modules/cjs/loader:958:12)
+      at Module.require (node:internal/modules/cjs/loader:1141:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10),
+  level: 'error',
+  message: 'uncaughtException: fetchProduct is not defined\n' +
+    'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  stack: 'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:38:11 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 2874,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 77283328,
+      heapTotal: 37289984,
+      heapUsed: 17973584,
+      external: 902920,
+      arrayBuffers: 41302
+    }
+  },
+  os: {
+    loadavg: [ 1.50732421875, 2.59033203125, 4.03564453125 ],
+    uptime: 4134
+  },
+  trace: [
+    {
+      column: 43,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js',
+      function: null,
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1117,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 958,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1141,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js',
+      function: null,
+      line: 6,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:38:11'
+}
+{
+  error: ReferenceError: fetchProduct is not defined
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+      at Module.load (node:internal/modules/cjs/loader:1117:32)
+      at Module._load (node:internal/modules/cjs/loader:958:12)
+      at Module.require (node:internal/modules/cjs/loader:1141:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10),
+  level: 'error',
+  message: 'uncaughtException: fetchProduct is not defined\n' +
+    'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  stack: 'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:39:16 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 2891,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 77512704,
+      heapTotal: 36765696,
+      heapUsed: 18029184,
+      external: 902920,
+      arrayBuffers: 41302
+    }
+  },
+  os: {
+    loadavg: [ 2.68359375, 2.60498046875, 3.92529296875 ],
+    uptime: 4199
+  },
+  trace: [
+    {
+      column: 43,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js',
+      function: null,
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1117,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 958,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1141,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js',
+      function: null,
+      line: 6,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:39:16'
+}
+{
+  error: ReferenceError: fetchProduct is not defined
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+      at Module.load (node:internal/modules/cjs/loader:1117:32)
+      at Module._load (node:internal/modules/cjs/loader:958:12)
+      at Module.require (node:internal/modules/cjs/loader:1141:19)
+      at require (node:internal/modules/cjs/helpers:110:18)
+      at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)
+      at Module._compile (node:internal/modules/cjs/loader:1254:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10),
+  level: 'error',
+  message: 'uncaughtException: fetchProduct is not defined\n' +
+    'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  stack: 'ReferenceError: fetchProduct is not defined\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js:7:43)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1117:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:958:12)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1141:19)\n' +
+    '    at require (node:internal/modules/cjs/helpers:110:18)\n' +
+    '    at Object.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js:6:26)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1254:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:39:18 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 2903,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 75497472,
+      heapTotal: 37552128,
+      heapUsed: 17856808,
+      external: 902920,
+      arrayBuffers: 41302
+    }
+  },
+  os: {
+    loadavg: [ 3.02880859375, 2.677734375, 3.94287109375 ],
+    uptime: 4201
+  },
+  trace: [
+    {
+      column: 43,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/routes/storefrontroutes/routes.js',
+      function: null,
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1117,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 958,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1141,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/helpers',
+      function: 'require',
+      line: 110,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/mainRouter.js',
+      function: null,
+      line: 6,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1254,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1308,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:39:18'
+}
+{
+  error: Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist
+      at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+      at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+      at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+      at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)
+      at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)
+      at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+      at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)
+      at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:324:12)
+      --------------------
+      at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10
+      at new Promise (<anonymous>)
+      at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)
+      at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)
+      at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)
+      at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15 {
+    code: 'ER_NO_SUCH_TABLE',
+    errno: 1146,
+    sqlMessage: "Table 'u682599449_ECOMMERCEDB.Product' doesn't exist",
+    sqlState: '42S02',
+    index: 0,
+    sql: 'SELECT p.*, i.* FROM Product p\n' +
+      '    LEFT JOIN Image i ON i.productId = p.id\n' +
+      "    WHERE storeId = 'undefined'"
+  },
+  level: 'error',
+  message: "uncaughtException: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    "Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    '    at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)\n' +
+    '    at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)\n' +
+    '    at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+    '    at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+    '    at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+    '    at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at addChunk (node:internal/streams/readable:324:12)\n' +
+    '    --------------------\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15',
+  stack: "Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    '    at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)\n' +
+    '    at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)\n' +
+    '    at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+    '    at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+    '    at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+    '    at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at addChunk (node:internal/streams/readable:324:12)\n' +
+    '    --------------------\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:40:07 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 3059,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 76152832,
+      heapTotal: 37027840,
+      heapUsed: 18930552,
+      external: 922389,
+      arrayBuffers: 42359
+    }
+  },
+  os: {
+    loadavg: [ 2.2333984375, 2.517578125, 3.8173828125 ],
+    uptime: 4250
+  },
+  trace: [
+    {
+      column: 14,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js',
+      function: 'Sequence._packetToError',
+      line: 47,
+      method: '_packetToError',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js',
+      function: 'Query.ErrorPacket',
+      line: 79,
+      method: 'ErrorPacket',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._parsePacket',
+      line: 291,
+      method: '_parsePacket',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js',
+      function: 'Parser._parsePacket',
+      line: 433,
+      method: '_parsePacket',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js',
+      function: 'Parser.write',
+      line: 43,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.write',
+      line: 38,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 28,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: null,
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: null,
+      line: 526,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 513,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/readable',
+      function: 'addChunk',
+      line: 324,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.query',
+      line: 199,
+      method: 'query',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: 'query',
+      line: 3,
+      method: null,
+      native: false
+    },
+    {
+      column: 22,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js',
+      function: 'fetchProducts',
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js',
+      function: 'next',
+      line: 144,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js',
+      function: 'Route.dispatch',
+      line: 114,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:40:07'
+}
+{
+  error: Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist
+      at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+      at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+      at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+      at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)
+      at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)
+      at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+      at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)
+      at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:324:12)
+      --------------------
+      at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10
+      at new Promise (<anonymous>)
+      at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)
+      at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)
+      at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)
+      at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15 {
+    code: 'ER_NO_SUCH_TABLE',
+    errno: 1146,
+    sqlMessage: "Table 'u682599449_ECOMMERCEDB.Product' doesn't exist",
+    sqlState: '42S02',
+    index: 0,
+    sql: 'SELECT p.*, i.* FROM Product p\n' +
+      '    LEFT JOIN Image i ON i.productId = p.id\n' +
+      "    WHERE storeId = 'undefined'"
+  },
+  level: 'error',
+  message: "uncaughtException: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    "Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    '    at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)\n' +
+    '    at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)\n' +
+    '    at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+    '    at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+    '    at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+    '    at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at addChunk (node:internal/streams/readable:324:12)\n' +
+    '    --------------------\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15',
+  stack: "Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    '    at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)\n' +
+    '    at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)\n' +
+    '    at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+    '    at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+    '    at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+    '    at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at addChunk (node:internal/streams/readable:324:12)\n' +
+    '    --------------------\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:40:17 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 3099,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 76775424,
+      heapTotal: 37814272,
+      heapUsed: 18913840,
+      external: 922389,
+      arrayBuffers: 42359
+    }
+  },
+  os: {
+    loadavg: [ 2.03662109375, 2.466796875, 3.7841796875 ],
+    uptime: 4260
+  },
+  trace: [
+    {
+      column: 14,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js',
+      function: 'Sequence._packetToError',
+      line: 47,
+      method: '_packetToError',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js',
+      function: 'Query.ErrorPacket',
+      line: 79,
+      method: 'ErrorPacket',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._parsePacket',
+      line: 291,
+      method: '_parsePacket',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js',
+      function: 'Parser._parsePacket',
+      line: 433,
+      method: '_parsePacket',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js',
+      function: 'Parser.write',
+      line: 43,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.write',
+      line: 38,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 28,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: null,
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: null,
+      line: 526,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 513,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/readable',
+      function: 'addChunk',
+      line: 324,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.query',
+      line: 199,
+      method: 'query',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: 'query',
+      line: 3,
+      method: null,
+      native: false
+    },
+    {
+      column: 22,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js',
+      function: 'fetchProducts',
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js',
+      function: 'next',
+      line: 144,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js',
+      function: 'Route.dispatch',
+      line: 114,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:40:17'
+}
+{
+  error: Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist
+      at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+      at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+      at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+      at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)
+      at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)
+      at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+      at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)
+      at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:324:12)
+      --------------------
+      at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10
+      at new Promise (<anonymous>)
+      at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)
+      at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)
+      at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)
+      at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15 {
+    code: 'ER_NO_SUCH_TABLE',
+    errno: 1146,
+    sqlMessage: "Table 'u682599449_ECOMMERCEDB.Product' doesn't exist",
+    sqlState: '42S02',
+    index: 0,
+    sql: 'SELECT p.*, i.* FROM Product p\n' +
+      '    LEFT JOIN Image i ON i.productId = p.id\n' +
+      "    WHERE storeId = 'pattas'"
+  },
+  level: 'error',
+  message: "uncaughtException: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    "Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    '    at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)\n' +
+    '    at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)\n' +
+    '    at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+    '    at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+    '    at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+    '    at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at addChunk (node:internal/streams/readable:324:12)\n' +
+    '    --------------------\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15',
+  stack: "Error: ER_NO_SUCH_TABLE: Table 'u682599449_ECOMMERCEDB.Product' doesn't exist\n" +
+    '    at Sequence._packetToError (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)\n' +
+    '    at Query.ErrorPacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)\n' +
+    '    at Protocol._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+    '    at Parser._parsePacket (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+    '    at Parser.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+    '    at Protocol.write (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:38:16)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:88:28)\n' +
+    '    at Socket.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:526:10)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at addChunk (node:internal/streams/readable:324:12)\n' +
+    '    --------------------\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:199:23)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js:13:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:144:13)\n' +
+    '    at Route.dispatch (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js:284:15',
+  exception: true,
+  date: 'Sun Oct 15 2023 12:40:38 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 3153,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 76480512,
+      heapTotal: 37027840,
+      heapUsed: 18938024,
+      external: 922389,
+      arrayBuffers: 42359
+    }
+  },
+  os: {
+    loadavg: [ 2.3388671875, 2.49462890625, 3.75439453125 ],
+    uptime: 4281
+  },
+  trace: [
+    {
+      column: 14,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Sequence.js',
+      function: 'Sequence._packetToError',
+      line: 47,
+      method: '_packetToError',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/sequences/Query.js',
+      function: 'Query.ErrorPacket',
+      line: 79,
+      method: 'ErrorPacket',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._parsePacket',
+      line: 291,
+      method: '_parsePacket',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js',
+      function: 'Parser._parsePacket',
+      line: 433,
+      method: '_parsePacket',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Parser.js',
+      function: 'Parser.write',
+      line: 43,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.write',
+      line: 38,
+      method: 'write',
+      native: false
+    },
+    {
+      column: 28,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: null,
+      line: 88,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: null,
+      line: 526,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 513,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/streams/readable',
+      function: 'addChunk',
+      line: 324,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.query',
+      line: 199,
+      method: 'query',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: 'query',
+      line: 3,
+      method: null,
+      native: false
+    },
+    {
+      column: 22,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/storefrontconrtroller/product.ctrl.js',
+      function: 'fetchProducts',
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js',
+      function: 'next',
+      line: 144,
+      method: null,
+      native: false
+    },
+    {
+      column: 3,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/route.js',
+      function: 'Route.dispatch',
+      line: 114,
+      method: 'dispatch',
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    },
+    {
+      column: 15,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/index.js',
+      function: null,
+      line: 284,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2023-10-15 12:40:38'
+}
