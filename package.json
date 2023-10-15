@@ -6,7 +6,7 @@
   "scripts": {
     "migrate-up": "npx db-migrate up --config dbconfig/dev.json",
     "migrate-create": "npx cross-env MIGRATION_NAME=dynamic-migration-name db-migrate create $MIGRATION_NAME --config dbconfig/dev.json",
-    "start": "npm run migrate-up && node app.js",
+    "start": "node app.js",
     "dev": "npm run migrate-up && nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
