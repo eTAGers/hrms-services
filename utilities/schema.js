@@ -30,10 +30,22 @@ const signUpSchema = Joi.object({
 const createStoreSchema = Joi.object({
   storeName: Joi.string().required(),
   storeCategory: Joi.string().required(),
-}).messages(customMessages);
+});
+
+const createProductSchema = Joi.object({
+  name: Joi.string().required(),
+  categories: Joi.array().required(),
+  originalPrice: Joi.string().required(),
+  sellingPrice: Joi.string().required(),
+  unit: Joi.string().required(),
+  qty: Joi.string().required(),
+  description: Joi.string().required(),
+  storeId: Joi.number().required(),
+});
 
 module.exports = {
   loginSchema,
   signUpSchema,
   createStoreSchema,
+  createProductSchema,
 };
