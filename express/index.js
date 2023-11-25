@@ -7,7 +7,7 @@ const { endpoint, port = 5500 } = require("../config");
 const path = require("path");
 const { isAuthenticated } = require("../helper/tokenVerify");
 
-const routes = require("../app/routes");
+const routes = require("../app/mainRouter");
 
 module.exports = () => {
   for (const utility in utilities) {
@@ -41,7 +41,10 @@ module.exports = () => {
         `);
   });
   app.use(express.static(path.join(__dirname, "../docs")));
-
+  app.use(
+    "/images",
+    express.static(path.join(__dirname, "../resources", "assets"))
+  );
   app.use((error, request, response, next) => {
     if (error !== null) {
       logger.error(`express/index.js:line27 :: ${error.message}`);

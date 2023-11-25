@@ -1,13 +1,17 @@
+const { storePresentQuery } = require("../app/query/store.query");
 const { noAuthRequired } = require("../config");
-const { responseMessages } = require("../utilities/messages");
-const { query } = require("./executequery");
-const { jwtDecode } = require("./jwtToken");
 const { mysqlSingleResponseHandler } = require("../utilities/utility");
+const { query } = require("./executequery");
 
 module.exports = {
   isAuthenticated: async (req, res, next) => {
     try {
-      if (noAuthRequired.find((x) => x === req.url)) {
+      if (noAuthRequired.some((route) => req.url.startsWith(route))) {
+        if (req.headers["store"]) {
+          let store = req.headers["store"];
+          let storeId = await query(storePresentQuery(store));
+          req.headers["tenantid"] = mysqlSingleResponseHandler(storeId).storeid;
+        }
         next();
       } else {
         let token =
@@ -18,22 +22,6 @@ module.exports = {
           req.headers["authtoken"];
 
         if (typeof token !== "undefined") {
-          const bearer = token.split(" ");
-          const bearerToken = bearer[1];
-          req.user = jwtDecode(bearerToken);
-          const previousToken = mysqlSingleResponseHandler(
-            await query(
-              `select jwt from userDetails where userID = ${req.user.userID}`
-            )
-          );
-          if (previousToken.jwt != bearerToken) {
-            responseHandler.errorResponse(
-              res,
-              "User Login from different browser. Please Login Again",
-              "User Login from different browser. Please Login Again"
-            );
-            return;
-          }
           next();
         } else {
           responseHandler.errorResponse(

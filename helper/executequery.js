@@ -1,12 +1,13 @@
-const { con } = require("../config/mysqldb");
-const query = async (QUERY) => {
+const { pool } = require("../config/mysqldb");
+const query = async (QUERY, params) => {
   return new Promise((res, rej) => {
-    con.query(QUERY, function (err, result) {
+    pool.query(QUERY, params, function (err, result) {
       if (err) {
         rej(err);
-        // console.log(err);
+        console.log(err);
         throw err;
       }
+      console.log("Query:", QUERY, "params:", params, "query result:", result);
       res(result);
     });
   });
