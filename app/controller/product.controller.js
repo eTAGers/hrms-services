@@ -1,7 +1,10 @@
 const { query } = require("../../helper/executequery");
 const { responseHandler } = require("../../utilities");
 const { responseMessages } = require("../../utilities/messages");
-const { createProductSchema } = require("../../utilities/schema");
+const {
+  createProductSchema,
+  updateProductSchema,
+} = require("../../utilities/schema");
 const { mysqlSingleResponseHandler } = require("../../utilities/utility");
 const {
   fetchProductAdmin,
@@ -67,6 +70,34 @@ const createProductHandler = async (req, res) => {
   }
 };
 
+const updateProductHandler = async (req, res) => {
+  try {
+    await updateProductSchema.validateAsync(req.body);
+    const { storeId, productId, ...rest } = req.body;
+    let productResp = await query(fetchProductAdmin(storeId));
+    productResp = mysqlSingleResponseHandler(productResp);
+
+    let productJson = JSON.parse(productResp.productJson);
+    const indexToUpdate = productJson.findIndex(
+      (product) => product.productId === productId
+    );
+
+    if (indexToUpdate !== -1) {
+      productJson[indexToUpdate] = { ...productJson[indexToUpdate], ...rest };
+    } else {
+      console.log("Product not found");
+    }
+    await query(updateProducts(JSON.stringify(productJson, null, 2), storeId));
+    responseHandler.successResponse(
+      res,
+      rest,
+      responseMessages.addedSuccessfully
+    );
+  } catch (err) {
+    responseHandler.errorResponse(res, err.message, err.message);
+  }
+};
+
 const uploadProductImagesHandler = async (req, res) => {
   let path = req.file.filename;
 
@@ -88,4 +119,5 @@ module.exports = {
   fetchProducts: fetchProducts,
   createProducts: createProductHandler,
   uploadProductImages: uploadProductImagesHandler,
+  updateProducts: updateProductHandler,
 };

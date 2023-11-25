@@ -1757,3 +1757,417 @@
   ],
   timestamp: '2023-11-25 00:00:39'
 }
+{
+  error: Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1066:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at node:net:1250:9
+      at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+      --------------------
+      at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+      at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+      at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)
+      at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)
+      at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:202:8)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10
+      at new Promise (<anonymous>)
+      at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)
+      at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/product.controller.js:18:22)
+      at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5) {
+    errno: -51,
+    code: 'ENETUNREACH',
+    syscall: 'connect',
+    address: '154.41.233.204',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  message: 'uncaughtException: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:202:8)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/product.controller.js:18:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)',
+  stack: 'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at Pool.query (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:202:8)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:4:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at query (/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js:3:10)\n' +
+    '    at fetchProducts (/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/product.controller.js:18:22)\n' +
+    '    at Layer.handle [as handle_request] (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js:95:5)',
+  exception: true,
+  date: 'Sat Nov 25 2023 23:56:58 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 4335,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 51380224,
+      heapTotal: 20774912,
+      heapUsed: 18740720,
+      external: 963424,
+      arrayBuffers: 85477
+    }
+  },
+  os: {
+    loadavg: [ 2.8525390625, 2.46337890625, 2.40771484375 ],
+    uptime: 3513
+  },
+  trace: [
+    {
+      column: 16,
+      file: 'node:net',
+      function: 'internalConnect',
+      line: 1066,
+      method: null,
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/async_hooks',
+      function: 'defaultTriggerAsyncIdScope',
+      line: 464,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: 'node:net',
+      function: null,
+      line: 1250,
+      method: null,
+      native: false
+    },
+    {
+      column: 11,
+      file: 'node:internal/process/task_queues',
+      function: 'process.processTicksAndRejections',
+      line: 77,
+      method: 'processTicksAndRejections',
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 48,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._enqueue',
+      line: 144,
+      method: '_enqueue',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.handshake',
+      line: 51,
+      method: 'handshake',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: 'PoolConnection.connect',
+      line: 116,
+      method: 'connect',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.getConnection',
+      line: 48,
+      method: 'getConnection',
+      native: false
+    },
+    {
+      column: 8,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.query',
+      line: 202,
+      method: 'query',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: null,
+      line: 4,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/helper/executequery.js',
+      function: 'query',
+      line: 3,
+      method: null,
+      native: false
+    },
+    {
+      column: 22,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app/controller/product.controller.js',
+      function: 'fetchProducts',
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/express/lib/router/layer.js',
+      function: 'Layer.handle [as handle_request]',
+      line: 95,
+      method: 'handle [as handle_request]',
+      native: false
+    }
+  ],
+  timestamp: '2023-11-25 23:56:58'
+}
+{
+  error: Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1066:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at node:net:1250:9
+      at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+      --------------------
+      at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+      at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+      at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)
+      at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)
+      at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10
+      at new Promise (<anonymous>)
+      at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)
+      at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)
+      at Object.onceWrapper (node:events:627:28)
+      at Server.emit (node:events:513:28) {
+    errno: -51,
+    code: 'ENETUNREACH',
+    syscall: 'connect',
+    address: '154.41.233.204',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  message: 'uncaughtException: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)\n' +
+    '    at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)\n' +
+    '    at Object.onceWrapper (node:events:627:28)\n' +
+    '    at Server.emit (node:events:513:28)',
+  stack: 'Error: connect ENETUNREACH 154.41.233.204:3306 - Local (0.0.0.0:0)\n' +
+    '    at internalConnect (node:net:1066:16)\n' +
+    '    at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)\n' +
+    '    at node:net:1250:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n' +
+    '    --------------------\n' +
+    '    at Protocol._enqueue (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:144:48)\n' +
+    '    at Protocol.handshake (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js:51:23)\n' +
+    '    at PoolConnection.connect (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js:116:18)\n' +
+    '    at Pool.getConnection (/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js:48:16)\n' +
+    '    at /Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:8:10\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at connectToDB (/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js:7:10)\n' +
+    '    at Server.<anonymous> (/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js:15:9)\n' +
+    '    at Object.onceWrapper (node:events:627:28)\n' +
+    '    at Server.emit (node:events:513:28)',
+  exception: true,
+  date: 'Sun Nov 26 2023 00:00:50 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 7176,
+    uid: 504,
+    gid: 20,
+    cwd: '/Users/harihara.manibalan/Documents/E-com/E-com-services',
+    execPath: '/usr/local/bin/node',
+    version: 'v18.15.0',
+    argv: [
+      '/usr/local/bin/node',
+      '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js'
+    ],
+    memoryUsage: {
+      rss: 78053376,
+      heapTotal: 38076416,
+      heapUsed: 19989688,
+      external: 1082359,
+      arrayBuffers: 202329
+    }
+  },
+  os: {
+    loadavg: [ 1.8857421875, 2.18115234375, 2.298828125 ],
+    uptime: 3745
+  },
+  trace: [
+    {
+      column: 16,
+      file: 'node:net',
+      function: 'internalConnect',
+      line: 1066,
+      method: null,
+      native: false
+    },
+    {
+      column: 18,
+      file: 'node:internal/async_hooks',
+      function: 'defaultTriggerAsyncIdScope',
+      line: 464,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: 'node:net',
+      function: null,
+      line: 1250,
+      method: null,
+      native: false
+    },
+    {
+      column: 11,
+      file: 'node:internal/process/task_queues',
+      function: 'process.processTicksAndRejections',
+      line: 77,
+      method: 'processTicksAndRejections',
+      native: false
+    },
+    {
+      column: null,
+      file: '    --------------------',
+      function: null,
+      line: null,
+      method: null,
+      native: null
+    },
+    {
+      column: 48,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol._enqueue',
+      line: 144,
+      method: '_enqueue',
+      native: false
+    },
+    {
+      column: 23,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/protocol/Protocol.js',
+      function: 'Protocol.handshake',
+      line: 51,
+      method: 'handshake',
+      native: false
+    },
+    {
+      column: 18,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Connection.js',
+      function: 'PoolConnection.connect',
+      line: 116,
+      method: 'connect',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/node_modules/mysql/lib/Pool.js',
+      function: 'Pool.getConnection',
+      line: 48,
+      method: 'getConnection',
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js',
+      function: null,
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'new Promise',
+      line: null,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/config/mysqldb.js',
+      function: 'connectToDB',
+      line: 7,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: '/Users/harihara.manibalan/Documents/E-com/E-com-services/app.js',
+      function: null,
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 627,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Server.emit',
+      line: 513,
+      method: 'emit',
+      native: false
+    }
+  ],
+  timestamp: '2023-11-26 00:00:50'
+}
