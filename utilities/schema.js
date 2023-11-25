@@ -41,6 +41,11 @@ const createProductSchema = Joi.object({
   qty: Joi.string().required(),
   description: Joi.string().required(),
   storeId: Joi.number().required(),
+  attributes: Joi.any(),
+  img: Joi.array().required(),
+  features: Joi.string().required(),
+  topSelling: Joi.string().required(),
+  isNewProduct: Joi.string().required(),
 });
 
 module.exports = {
