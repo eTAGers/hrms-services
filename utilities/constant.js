@@ -13,6 +13,7 @@ const subRoutes = {
   upload: "/upload",
   isStore: "/isStore",
   fetch: "/fetch",
+  imgFetch: "/img",
 };
 
 module.exports = {

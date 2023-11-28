@@ -10,6 +10,8 @@ const {
   fetchProductAdmin,
   updateProducts,
   insertProducts,
+  insertProductImg,
+  fetchProductImg,
 } = require("../query/product.query");
 
 const fetchProducts = async (req, res) => {
@@ -99,19 +101,45 @@ const updateProductHandler = async (req, res) => {
 };
 
 const uploadProductImagesHandler = async (req, res) => {
-  let path = req.file.filename;
-
   try {
+    const { originalname: fileName } = req.file;
+    const { storeId } = req.body;
+    const name = `${Date.now()}-bezkoder-${fileName}`;
+
+    const values = [storeId, req.file.buffer, name, req.file.mimetype];
+    await query(insertProductImg(), values);
+
     responseHandler.successResponse(
       res,
       {
-        fileName: req.file.originalname,
-        path: path,
+        fileName: fileName,
+        path: name,
       },
       responseMessages.uploadSuccessfully
     );
   } catch (error) {
-    responseHandler.errorResponse(res, err.message, err.message);
+    console.error(error);
+    responseHandler.errorResponse(res, error.message, error.message);
+  }
+};
+
+const fetchProductImagesHandler = async (req, res) => {
+  try {
+    const { fileName, storeId } = req.body;
+
+    let resp = await query(fetchProductImg(storeId, fileName));
+    resp = mysqlSingleResponseHandler(resp);
+
+    responseHandler.successResponse(
+      res,
+      {
+        ...resp,
+      },
+      responseMessages.uploadSuccessfully
+    );
+  } catch (error) {
+    console.error(error);
+    responseHandler.errorResponse(res, error.message, error.message);
   }
 };
 
@@ -120,4 +148,5 @@ module.exports = {
   createProducts: createProductHandler,
   uploadProductImages: uploadProductImagesHandler,
   updateProducts: updateProductHandler,
+  fetchImage: fetchProductImagesHandler,
 };
